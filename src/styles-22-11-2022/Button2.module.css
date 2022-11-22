@@ -1,0 +1,12 @@
+button {
+  background-color: red;
+  color: white;
+}
+
+.primary {
+  background-color: blue;
+}
+
+.remove {
+  background-color: coral;
+}
