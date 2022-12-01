@@ -1,39 +1,63 @@
-import { useRef } from "react";
+import React, { useRef, useState } from "react";
+import { StyledButtonContainer, StyledContainer } from "./VideoCartStyled";
 
 const VideoCard = (props) => {
-  console.log(props);
+  const [displayButton, setDisplayButton] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+
   const videoRef = useRef();
 
   const handlePlayClick = () => {
     videoRef.current.play();
+    setIsPlaying(true);
   };
 
   const handlePauseClick = () => {
     videoRef.current.pause();
+    setIsPlaying(false);
   };
 
-  const handleMuteClick = () => {
-    // const newValue = !videoRef.current.muted;
-    const newValue = videoRef.current.muted === true ? false : true;
+  // const handleMuteClick = () => {
+  //   // const newValue = !videoRef.current.muted;
+  //   const newValue = videoRef.current.muted === true ? false : true;
 
-    videoRef.current.muted = newValue;
+  //   videoRef.current.muted = newValue;
+  // };
+  console.log(videoRef);
+  const handleMouseOver = () => {
+    setDisplayButton(true);
+  };
+
+  const handleMouseOut = () => {
+    setDisplayButton(false);
   };
 
   return (
-    <div>
-      <video
-        ref={videoRef}
-        height="100px"
-        width="180px"
-        muted={true}
-        src={props.source}
-      />
+    <StyledContainer
+      onMouseEnter={handleMouseOver}
+      onMouseLeave={handleMouseOut}
+    >
+      {displayButton ? (
+        <StyledButtonContainer>
+          {isPlaying === true ? (
+            <button onClick={handlePauseClick}>Pause</button>
+          ) : (
+            <button onClick={handlePlayClick}>Play</button>
+          )}
+          {/* <button onClick={handleMuteClick}>Mute/Unmute</button> */}
+        </StyledButtonContainer>
+      ) : null}
+
       <div>
-        <button onClick={handlePlayClick}>Play</button>
-        <button onClick={handlePauseClick}>Pause</button>
-        <button onClick={handleMuteClick}>Mute/Unmute</button>
+        <video
+          ref={videoRef}
+          height="100px"
+          width="180px"
+          muted={true}
+          src={props.source}
+        />
       </div>
-    </div>
+    </StyledContainer>
   );
 };
 
