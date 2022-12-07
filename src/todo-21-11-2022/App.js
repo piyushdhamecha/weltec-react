@@ -38,15 +38,13 @@ const App = () => {
 
   const handleCompletedClick = (index) => {
     const newList = list.map((value, i) => {
+      const newValue = { ...value };
+
       if (i === index) {
-        const newValue = { ...value };
-
         newValue.completed = newValue.completed === true ? false : true;
-
-        return newValue;
-      } else {
-        return value;
       }
+
+      return newValue;
     });
 
     setList(newList);
