@@ -9,7 +9,9 @@ import "./index.css";
 // import App from "./uncontrolled-29-11-2022/App";
 // import App from "./assignment-30-11-2022/App";
 // import App from "./assignment-2-02-12-2022";
-import App from "./forward-ref-08-12-2022";
+// import App from "./forward-ref-08-12-2022";
+// import App from "./memo-09-12-2022";
+import App from "./memo-2-12-12-2022";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
