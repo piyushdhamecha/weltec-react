@@ -11,7 +11,6 @@ const App = () => {
       <Link to="/mobiles">Mobiles</Link>
       <br />
       <Link to="/head-phones">Head phones</Link>
-      <Mobiles />
       <Routes>
         <Route path="/mobiles/*" element={<Mobiles />} />
         <Route path="/head-phones/*" element={<HeadPhones />} />
