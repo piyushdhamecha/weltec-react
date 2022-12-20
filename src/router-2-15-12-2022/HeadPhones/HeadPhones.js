@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Outlet, Route, Routes } from "react-router-dom";
 import BoatHeadPhones from "./BoatHeadPhones";
 import OnePlus from "./OnePlus";
 
@@ -6,13 +6,14 @@ const HeadPhones = () => {
   return (
     <div>
       <h2>Head phones</h2>
-      <Link to="/head-phones/boat">Boat</Link>
+      <Link to="boat">Boat</Link>
       <br />
-      <Link to="/head-phones/one-plus">One plus</Link>
-      <Routes>
+      <Link to="one-plus">One plus</Link>
+      <Outlet />
+      {/* <Routes>
         <Route path="/boat" element={<BoatHeadPhones />} />
         <Route path="/one-plus" element={<OnePlus />} />
-      </Routes>
+      </Routes> */}
     </div>
   );
 };
