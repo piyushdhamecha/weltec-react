@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import "./index.css";
+// import "./index.css";
 // import App from './App';
 // import App from "./todo-21-11-2022/App";
 // import App from "./styles-22-11-2022/App";
@@ -15,12 +15,17 @@ import "./index.css";
 // import App from "./memo-2-12-12-2022";
 // import App from "./forms-13-12-2022";
 // import App from "./router-14-12-2022";
-import App from "./router-2-15-12-2022";
+// import App from "./router-2-15-12-2022";
 // import App from "./route-hooks-16-12-2022";
+import App from "./dynamic-routing-21-12-2022";
+
+import { StyledEngineProvider } from "@mui/material/styles";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <StyledEngineProvider injectFirst>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StyledEngineProvider>
 );
