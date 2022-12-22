@@ -17,7 +17,8 @@ import { BrowserRouter } from "react-router-dom";
 // import App from "./router-14-12-2022";
 // import App from "./router-2-15-12-2022";
 // import App from "./route-hooks-16-12-2022";
-import App from "./dynamic-routing-21-12-2022";
+// import App from "./dynamic-routing-21-12-2022";
+import App from "./private-route-22-12-2022";
 
 import { StyledEngineProvider } from "@mui/material/styles";
 

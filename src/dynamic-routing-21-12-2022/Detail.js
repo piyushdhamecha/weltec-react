@@ -7,8 +7,8 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { Link, useParams } from "react-router-dom";
 
-const Detail = (props) => {
-  let params = useParams();
+const Detail = () => {
+  const params = useParams();
   const [post, setPost] = useState();
 
   useEffect(() => {
