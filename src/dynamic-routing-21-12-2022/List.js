@@ -52,7 +52,7 @@ const List = () => {
               <TableCell>{post.title}</TableCell>
               <TableCell align="center">
                 {/* <Button onClick={() => setPostId(post.id)}>View details</Button> */}
-                <Link to={`/${post.id}`}>View detail</Link>
+                <Link to={`/admin/${post.id}`}>View detail</Link>
               </TableCell>
             </TableRow>
           ))}

@@ -10,7 +10,7 @@ import { Link, useParams } from "react-router-dom";
 const Detail = () => {
   const params = useParams();
   const [post, setPost] = useState();
-
+  console.log(params);
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${params.piyush}`)
       .then((response) => response.json())
