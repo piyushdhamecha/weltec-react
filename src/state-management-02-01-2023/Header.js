@@ -7,7 +7,8 @@ import Typography from "@mui/material/Typography";
 
 import RightHeaderIcons from "./RightHeaderIcon";
 
-const Header = ({ cartCount }) => {
+const Header = () => {
+  console.log("Header rerendered");
   return (
     <AppBar position="static">
       <Toolbar>
@@ -20,7 +21,7 @@ const Header = ({ cartCount }) => {
           Mobiles
         </Typography>
         <Box sx={{ flexGrow: 1 }} />
-        <RightHeaderIcons cartCount={cartCount} />
+        <RightHeaderIcons />
       </Toolbar>
     </AppBar>
   );

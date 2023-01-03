@@ -2,10 +2,11 @@ import Box from "@mui/material/Box";
 
 import ShippingCartIconComponent from "./ShippingCartIconComponent";
 
-const RightHeaderIcons = ({ cartCount }) => {
+const RightHeaderIcons = () => {
+  console.log("RightHeaderIcons rerendered");
   return (
     <Box sx={{ display: { xs: "none", md: "flex" } }}>
-      <ShippingCartIconComponent cartCount={cartCount} />
+      <ShippingCartIconComponent />
     </Box>
   );
 };
