@@ -23,7 +23,8 @@ import { Provider } from 'react-redux'
 // import App from "./private-route-22-12-2022";
 // import App from "./private-route-2-23-12-2022";
 // import App from "./useReducer-05-01-2023";
-import App from "./state-management-26-12-2022";
+// import App from "./state-management-26-12-2022";
+import App from './redux-17-01-2023'
 
 import { StyledEngineProvider } from "@mui/material/styles";
 import store from "./redux-17-01-2023/redux/store";
