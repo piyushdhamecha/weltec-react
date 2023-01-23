@@ -26,10 +26,12 @@ import { Provider } from 'react-redux'
 // import App from "./state-management-26-12-2022";
 // import App from "./state-management-02-01-2023";
 // import App from './redux-17-01-2023'
-import App from './redux-2-20-01-2023'
+// import App from './redux-2-20-01-2023'
+import App from './redux-3-21-01-2023'
 
 import { StyledEngineProvider } from "@mui/material/styles";
-import store from "./redux-2-20-01-2023/redux/store";
+// import store from "./redux-2-20-01-2023/redux/store";
+import store from './redux-3-21-01-2023/store'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
